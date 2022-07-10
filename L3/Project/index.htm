@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <p>Это текст</p>
+
+    <script language="JavaScript">
+        alert ("Hello world");
+    </script>
+    <p>Опять текст</p>
+    <script language="JavaScript">
+    let test = prompt("test");
+    alert(test);
+    </script>
+    <script lang="JavaScript">
+        let num = parseInt(prompt("Введите число"));
+        alert(num + 5);
+        let year = prompt("Какой сейчас год?", "");
+        if (year == 2022)
+        {
+            alert("Правильно!");
+        }
+        else
+        {
+            alert ("Неправильно!!!");
+        }
+        let i = 0;
+        while (i < 3)
+        {
+            alert(i);
+            i++
+        }
+        for (let index = 0; index < 4; index++) {
+           alert(index);
+            
+        }
+
+        let a = 2+2;
+        switch (a) {
+            case 4:
+                alert('Yes!');
+                break;
+        
+            default:
+                alert("no");
+                break;
+        }
+        function showMessage()
+        {
+            alert("Привет");
+        }
+        showMessage();
+
+        function sum(x,y) {
+            return x+y;
+        }
+        let x = parseInt(prompt("Введите первое число"))
+        let y = parseInt(prompt("Введите второе число"))
+        alert(sum(x,y))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+<body>
+    <script lang="JavaScript">
+        let mv;
+        let player;
+        let name;
+        let candies
+        alert("На столе лежит 200 конфета. Играют два игрока делая ход друг после друга.\nПервый ход определяется жеребьёвкой. За один ход можно забрать не более чем 28 конфет.\nВсе конфеты оппонента достаются сделавшему последний ход.")
+        
+        function first_player()
+        {
+            
+            name = prompt("Введите ваше имя:", "имя");
+            gamestart = Math.floor(Math.random() * (2 - 1 + 1) + 1);
+            if (gamestart==1) 
+            {
+                player = name;
+            }
+            else
+            {
+                player = "Бот";
+            }
+            alert(`Начинает ${player}`);
+            return player
+        }
+        function bot_move(cand)
+        {
+            if (cand % 29 == 0)
+            {
+                mv = Math.floor(Math.random() * (28 - 1 + 1) + 1)    
+            }
+            else
+            {
+                mv = cand - (parseInt(cand / 29)) * 29
+            }
+            return mv
+        }
+
+        function player_move(name)
+        {
+            while (true)
+            {
+                mv = parseInt(prompt(`На столе ${candies} конфет\n${name}, Берите конфеты:`));
+                if (1 <= mv && mv <= 28)
+                {
+                    return mv;
+                }    
+                else
+                {
+                    alert("Неверное коллличество конфет или вы ввели не число!!!\nВозьмите от 1 до 28 конфет! ");
+                }
+            }    
+        }
+
+        function main()
+        {
+            let move
+            candies = 200;
+            player = first_player();
+            while (candies > 28)
+            {
+                if (player != "Бот")
+                {
+                    move = player_move(player);
+                    candies -= move;
+                    alert(`${player} берёт ${move} конфет\nосталось ${candies}`)
+                    player = "Бот";
+                }
+                else
+                {
+                    move = bot_move(candies);
+                    candies -= move;
+                    alert(`${player} берёт ${move} конфет\nосталось ${candies}`)
+                    player = name;
+                }
+            }
+           alert(`${player} победил!!!`)
+        }
+
+        main();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body { font-family: 'Roboto', sans-serif;
+        background-color: rgb(241, 238, 233);}
+
+h1, h2, h3 {position: relative;
+            text-align: center;}
+
+p {font-size: x-large;
+    position: relative;
+    text-align: center;
+    }
+
+.pn {position: relative;
+    top: 360px;
+    }
+
+.top {position: relative;
+    left: 35%;
+    }
+
+a {font-size: xx-large;
+    color: rgba(209, 12, 12, 0.708);
+    position: relative;
+    text-align: center;
+    top: 800px;
+    left: 43%;
+    }
+
+.pr {color: rgb(78, 70, 229);
+    position: absolute;
+    left: 60%;}
+
+.xr {text-align: left;
+    color: rgb(78, 70, 229);
+    position: absolute;
+    left: 400px;}
+
+.cam1 {position: absolute;
+        text-align: left;
+        top: 1000px;
+        left: 5%;
+      }
+
+.cam2 {position: absolute;
+        text-align: center;
+        top: 1000px;
+        left: 37%;
+      }
+
+.cam3 {position: absolute;
+        text-align: right;
+        top: 1000px;
+        left: 70%;
+      }
